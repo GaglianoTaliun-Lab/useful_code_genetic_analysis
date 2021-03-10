@@ -1,6 +1,12 @@
 import sys
 import time
 
+start_time = None
+
+def prepare_print_progress():
+    global start_time
+    start_time = None
+
 def print_progress(i, time_elapsed = None):
     """show progress of process, often used in training a neural network model
     params
@@ -10,6 +16,14 @@ def print_progress(i, time_elapsed = None):
         after: descriptive content displayed after progress i, str
     """
     progress_info = '{:>7.2%}'.format(i) # align right, 7 characters atmost
+    if time_elapsed is None:
+        global start_time
+        if start_time is None:
+            start_time = time.time()
+            time_elapsed = 0.0
+        else:
+            time_elapsed = time.time() - start_time
+        
     if time_elapsed is not None:
         progress_info += '; elapsed:{:>3.0f}m{:0>2.0f}s'.format(
             time_elapsed // 60, time_elapsed % 60)
@@ -34,8 +48,13 @@ def print_progress(i, time_elapsed = None):
 
 if __name__ == "__main__":
     start = time.time() 
+    print("test using time attributes")
     for i in range(101):
         end = time.time()
         print_progress(i/100, end-start)
+        time.sleep(0.04)
+    print("test using global timing method")
+    for i in range(101):
+        print_progress(i/100)
         time.sleep(0.04)
 
