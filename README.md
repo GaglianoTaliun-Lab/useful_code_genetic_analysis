@@ -78,6 +78,9 @@
 6 chr6
 ```
 
+#### rsID to chr:bp (GRCh37 or GRCh38) and vice versa
+SNPnexus https://www.snp-nexus.org/v4/
+
 #### Some Useful GWAS Scripts in the Code section; also more in these repositories:
 https://github.com/ilarsf/gwasTools (and forked version: https://github.com/bnwolford/gwasTools)
 https://github.com/hyunminkang/apigenome Hyun Min Kang's Big data genomics analysis libraries & tools
