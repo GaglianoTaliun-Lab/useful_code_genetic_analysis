@@ -41,6 +41,7 @@
 ##### disc usage 
 ###### human readable total size of the .bgz files `du -hc *.bgz` 
 ###### within the current directory `df -lm .`
+###### total size of directory (e.g. all the files within) `df -sh <directory> .`
 
 ##### initialize environment before `sort` commands that are followed by `join`
 `LC_ALL=C; export LC_ALL`
