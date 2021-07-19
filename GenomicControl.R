@@ -9,6 +9,8 @@ Zsq=qchisq(1-p, 1)
 #Zsq=qchisq(p, 1, lower.tail=F)
 lambda=median(Zsq)/0.456
 lambda #print out GC lambda
+
+# if lambda is not 1.0, the following code "corrects" the p-values
 newZsq=Zsq/lambda #GC correct Zsq
 Newp=1-pchisq(newZsq, 1) #GC correct PVALUE
 
