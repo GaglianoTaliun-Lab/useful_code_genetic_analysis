@@ -1,0 +1,4 @@
+https://cran.r-project.org/web/packages/hexbin/index.html
+
+Example at the bottom of this page:
+https://stackoverflow.com/questions/15504983/formatting-and-manipulating-a-plot-from-the-r-package-hexbin
