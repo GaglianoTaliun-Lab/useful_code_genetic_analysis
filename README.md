@@ -87,7 +87,7 @@ https://github.com/ilarsf/gwasTools (and forked version: https://github.com/bnwo
 https://github.com/hyunminkang/apigenome Hyun Min Kang's Big data genomics analysis libraries & tools
 <p>Carlo Sidore's Sequence Analysis Tutorial: https://genome.sph.umich.edu/wiki/Tutorial:_Low_Pass_Sequence_Analysis
 
-#### RANDOM
+#### Other useful resources
 online tool to merge the multiple JPEGs together https://www.imgonline.com.ua/eng/combine-two-images-into-one.php
 
 visualization of a table of data, Sparkler: http://bipolar-project.sph.umich.edu/html/sparkler/ 
@@ -99,3 +99,13 @@ quick look-up of heritability estimates from twin studies: http://match.ctglab.n
 GWAS atlas: https://atlas.ctglab.nl
 
 Pattern recognition and machine learning: https://github.com/ctgk/PRML/blob/master/README.md
+
+PheWeb instances: https://pheweb.org
+  
+PRS tutorial (UofT): https://kcniconfluence.camh.ca/display/GEN/Tutorial+for+Polygenic+Risk+Score
+  
+Database Drug Bank: https://www.uniprot.org/database/DB-0019
+  
+RNAseq GitHub course https://github.com/hemberg-lab/scRNA.seq.course
+  
+Neale lab UKB genetic correlation browser: https://ukbb-rg.hail.is
