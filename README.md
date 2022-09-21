@@ -88,6 +88,9 @@ See Zhu, Z., Zhang, F., Hu, H. et al. Integration of summary data from GWAS and 
 #### rsID to chr:bp (GRCh37 or GRCh38) and vice versa
 SNPnexus https://www.snp-nexus.org/v4/
 
+#### Compare two columns and output specifying whether they are the same or different
+awk '{ if ($2 == $3) { print "same"; } else { print "different"; } }' < input.txt > output.txt
+
 #### Some Useful GWAS Scripts in the Code section; also more in these repositories:
 https://github.com/ilarsf/gwasTools (and forked version: https://github.com/bnwolford/gwasTools)
 https://github.com/hyunminkang/apigenome Hyun Min Kang's Big data genomics analysis libraries & tools
