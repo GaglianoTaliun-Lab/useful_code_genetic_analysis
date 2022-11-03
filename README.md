@@ -96,6 +96,10 @@ https://github.com/ilarsf/gwasTools (and forked version: https://github.com/bnwo
 https://github.com/hyunminkang/apigenome Hyun Min Kang's Big data genomics analysis libraries & tools
 <p>Carlo Sidore's Sequence Analysis Tutorial: https://genome.sph.umich.edu/wiki/Tutorial:_Low_Pass_Sequence_Analysis
 
+###Genetic Power Calculators
+#Binary Traits: https://csg.sph.umich.edu/abecasis/cats/gas_power_calculator/
+#Quantiative Traits: https://genome.sph.umich.edu/wiki/Power_Calculations:_Quantitative_Traits
+
 #### Other useful resources
 online tool to merge the multiple JPEGs together https://www.imgonline.com.ua/eng/combine-two-images-into-one.php
 
