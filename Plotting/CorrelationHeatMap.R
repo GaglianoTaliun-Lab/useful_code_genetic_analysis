@@ -1,9 +1,9 @@
 #DESCRRIPTION
-#plot the correlatino
+#plot the correlation
 
 library(corrplot)
 
-R<-read.table("DataMatrix-withRowandColNames", as.is=T, h=T, row.names=1)
+R<-read.table("DataMatrix-withRowandColNames.csv", as.is=T, header=T, row.names=1, sep=",")
 
 R<-as.matrix(R)
 
