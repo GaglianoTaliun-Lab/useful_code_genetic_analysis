@@ -1,3 +1,6 @@
+#modified from https://github.com/CERC-Genomic-Medicine/scripts/blob/master/merge_minimac_dosages.py to allow for the mering of 10 imputed VCFs
+#IN PROGRESS - lines 181-201 need to be updated!
+
 import argparse
 import pysam
 import numpy as np
@@ -136,8 +139,8 @@ if __name__ == '__main__':
       vcf_merged.write(f'##vcf10={args.in_VCF10}\n')
       vcf_merged.write('#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT\t{}\n'.format('\t'.join(samples_combined)))
 
-      for record1, record2 in zip(vcf1.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf2.fetch(contig = args.chrom, start = args.begin, stop = args.end)):
-         assert record1.chrom == record2.chrom and record1.pos == record2.pos and record1.ref == record2.ref and record1.alts[0] == record2.alts[0], f'{record1.chrom}:{record1.pos}:{record1.ref}:{record1.alts[0]} vs {record2.chrom}:{record2.pos}:{record2.ref}:{record2.alts[0]}'         
+      for record1, record2, record3, record4, record5, record6, record7, record8, record9, record10 in zip(vcf1.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf2.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf3.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf4.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf5.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf6.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf7.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf8.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf9.fetch(contig = args.chrom, start = args.begin, stop = args.end), vcf10.fetch(contig = args.chrom, start = args.begin, stop = args.end)):
+         assert record1.chrom == record2.chrom == record3.chrom == record4.chrom == record5.chrom == record6.chrom == record7.chrom == record8.chrom == record9.chrom == record10.chrom and record1.pos == record2.pos == record3.pos == record4.pos == record5.pos == record6.pos == record7.pos == record8.pos == record9.pos == record10.pos and record1.ref == record2.ref == record3.ref == record4.ref == record5.ref == record6.ref == record7.ref == record8.ref == record9.ref == record10.ref and record1.alts[0] == record2.alts[0] == record3.alts[0] == record4.alts[0] == record5.alts[0] == record6.alts[0] == record7.alts[0] == record8.alts[0] == record9.alts[0] == record10.alts[0], f'{record1.chrom}:{record1.pos}:{record1.ref}:{record1.alts[0]} vs {record2.chrom}:{record2.pos}:{record2.ref}:{record2.alts[0]} vs {record3.chrom}:{record3.pos}:{record3.ref}:{record3.alts[0]} vs {record4.chrom}:{record4.pos}:{record4.ref}:{record4.alts[0]} vs {record5.chrom}:{record5.pos}:{record5.ref}:{record5.alts[0]} vs {record6.chrom}:{record6.pos}:{record6.ref}:{record6.alts[0]} vs {record7.chrom}:{record7.pos}:{record7.ref}:{record7.alts[0]} vs {record8.chrom}:{record8.pos}:{record8.ref}:{record8.alts[0]} vs {record9.chrom}:{record9.pos}:{record9.ref}:{record9.alts[0]} vs {record10.chrom}:{record10.pos}:{record10.ref}:{record10.alts[0]}'         
 
          af1 = record1.info['AF']
          af2 = record2.info['AF']
@@ -166,6 +169,14 @@ if __name__ == '__main__':
          for i, sample in enumerate(samples_combined):
             frmt1 = record1.samples.get(sample, None)
             frmt2 = record2.samples.get(sample, None)
+            frmt3 = record3.samples.get(sample, None)
+            frmt4 = record4.samples.get(sample, None)
+            frmt5 = record5.samples.get(sample, None)
+            frmt6 = record6.samples.get(sample, None)
+            frmt7 = record7.samples.get(sample, None)
+            frmt8 = record8.samples.get(sample, None)
+            frmt9 = record9.samples.get(sample, None)
+            frmt10 = record10.samples.get(sample, None)
  
             if frmt1 is None:
                phased = frmt2.phased
